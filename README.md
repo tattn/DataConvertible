@@ -45,6 +45,40 @@ extension YourClass: DataConvertible {
 
 If your class conforms to Codable, the class can conform to DataConvertible without any additional implementation.
 
+### Example
+
+#### Save a state of a view controller & load the state of the view controller
+
+```swift
+final class ViewController: UIViewController, Codable, DataConvertible {
+    private var itemId: String!
+    
+    enum CodingKeys: CodingKey {
+        case itemId
+    }
+
+    static func instantiate() -> ViewController {
+        let storyboard = UIStoryboard(name: "ViewController", bundle: nil)
+        return storyboard.instantiateInitialViewController() as! ViewController
+    }
+}
+
+extension Decodable where Self: ViewController {
+    init(from decoder: Decoder) throws {
+        self = Self.instantiate() as! Self
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        itemId = try container.decode(String.self, forKey: .itemId)
+    }
+}
+
+let viewController = ViewController.instantiate()
+viewController.itemId = "abc"
+
+try UserDefaults.standard.set(viewController, forKey: "viewController")
+
+let loadedViewController = UserDefaults.standard.value(ViewController.self, forKey: "viewController")!
+loadedViewController.itemId // "abc"
+```
 
 # Installation
 
