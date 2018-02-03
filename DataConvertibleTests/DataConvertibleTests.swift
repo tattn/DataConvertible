@@ -28,8 +28,8 @@ class DataConvertibleTests: XCTestCase {
         let model = Model(string: "abc", int: 123)
         let data = try model.convertToData()
         let decoded = try Model(data: data)
-        XCTAssertEqual(decoded.string, decoded.string)
-        XCTAssertEqual(decoded.int, decoded.int)
+        XCTAssertEqual(model.string, decoded.string)
+        XCTAssertEqual(model.int, decoded.int)
     }
     
 }
