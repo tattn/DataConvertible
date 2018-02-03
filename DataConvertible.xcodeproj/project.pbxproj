@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242FC79A2025DACA00D8F92A /* StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242FC7992025DACA00D8F92A /* StoryboardTests.swift */; };
+		242FC79D2025DB0600D8F92A /* UserProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 242FC79C2025DB0600D8F92A /* UserProfileViewController.storyboard */; };
 		249298192025B52600A1EF37 /* DataConvertible.h in Headers */ = {isa = PBXBuildFile; fileRef = 249298172025B52600A1EF37 /* DataConvertible.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		249298202025B5BC00A1EF37 /* DataConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2492981F2025B5BC00A1EF37 /* DataConvertible.swift */; };
 		249298282025B5DC00A1EF37 /* DataConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249298272025B5DC00A1EF37 /* DataConvertibleTests.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		242FC7992025DACA00D8F92A /* StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTests.swift; sourceTree = "<group>"; };
+		242FC79C2025DB0600D8F92A /* UserProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfileViewController.storyboard; sourceTree = "<group>"; };
 		249298142025B52600A1EF37 /* DataConvertible.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataConvertible.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		249298172025B52600A1EF37 /* DataConvertible.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataConvertible.h; sourceTree = "<group>"; };
 		249298182025B52600A1EF37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242FC79B2025DAF800D8F92A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				242FC79C2025DB0600D8F92A /* UserProfileViewController.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2492980A2025B52600A1EF37 = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +100,11 @@
 		249298262025B5DC00A1EF37 /* DataConvertibleTests */ = {
 			isa = PBXGroup;
 			children = (
+				242FC79B2025DAF800D8F92A /* Resources */,
 				249298272025B5DC00A1EF37 /* DataConvertibleTests.swift */,
 				249298322025BB3300A1EF37 /* UserDefaultsTests.swift */,
 				249298292025B5DC00A1EF37 /* Info.plist */,
+				242FC7992025DACA00D8F92A /* StoryboardTests.swift */,
 			);
 			path = DataConvertibleTests;
 			sourceTree = "<group>";
@@ -196,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242FC79D2025DB0600D8F92A /* UserProfileViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242FC79A2025DACA00D8F92A /* StoryboardTests.swift in Sources */,
 				249298332025BB3300A1EF37 /* UserDefaultsTests.swift in Sources */,
 				249298282025B5DC00A1EF37 /* DataConvertibleTests.swift in Sources */,
 			);
